@@ -1,0 +1,6 @@
+[submodule "fatcatmap/lib/apptools"]
+	path = fatcatmap/lib/apptools
+	url = git@github.com:momentum/apptools.git
+[submodule "fatcatmap/lib/appfactory"]
+	path = fatcatmap/lib/appfactory
+	url = git@github.com:momentum/appfactory.git

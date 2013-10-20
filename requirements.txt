@@ -1,0 +1,14 @@
+keen
+pytz
+jinja2
+webapp2
+protorpc
+protobuf
+webob
+slimmer
+requests
+nltk
+pycrypto
+gevent
+msgpack-python
+PyAMF
