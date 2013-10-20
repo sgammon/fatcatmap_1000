@@ -31,8 +31,17 @@ def main(args):
       :returns: Unix-style exit code - ``0`` for success,
       ``1`` or greater for failure. '''
 
-  print "hi i am a stub"
-  return 0
+  try:
+    if len(args) == 1:
+      if args[0] is "run":
+        from fatcatmap import __main__
+        __main__.run(args[1:])
+
+    return 0
+
+  except Exception as e:
+    print "Encountered exception: %s" % e
+    return 1
 
 
 if __name__ == "__main__": sys.exit(main(sys.argv[:]))

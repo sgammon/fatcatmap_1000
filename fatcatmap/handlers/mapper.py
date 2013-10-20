@@ -17,11 +17,11 @@
 '''
 
 
-# handlers
-from fatcatmap import handlers, routing
-
 # apptools
 from apptools.util import decorators
+
+# handlers
+from fatcatmap import handlers, routing
 
 
 @routing.rule('/', name='landing')

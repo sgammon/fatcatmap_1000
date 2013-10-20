@@ -16,3 +16,44 @@
               the included license and explicitly means acceptance to these terms.
 
 '''
+
+
+# stdlib
+import sys
+
+sys.path.insert(0, 'app')
+sys.path.insert(0, 'app/lib')
+
+## apptools!
+from apptools import dispatch
+from apptools.rpc import mappers
+from apptools.rpc import dispatch as rpc
+
+## stdlib wsgi server
+from wsgiref.simple_server import make_server
+
+## fcm! :)
+from fatcatmap.services import data, graph, media
+
+
+def run(args):
+
+    '''  '''
+
+    try:
+      if len(sys.argv) > 1 and sys.argv[1] == 'services':
+        app, port, label = rpc.initialize(), 8081, 'services'
+      else:
+        app, port, label = dispatch.gateway, 8080, 'app'
+
+      httpd = make_server('', port, app)
+
+      print "Serving fcm %s on port %s..." % (label, port)
+      httpd.serve_forever()
+      return 0
+    except Exception as e:
+      print "Encountered exception: %s" % e
+      return 1
+
+
+if __name__ == '__main__': sys.exit(run(sys.argv))
