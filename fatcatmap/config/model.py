@@ -17,6 +17,10 @@
 '''
 
 
+## Globals
+_config = {}
+
+
 # Redis Adapter
 _config['apptools.model.adapters.redis.Redis'] = {
 

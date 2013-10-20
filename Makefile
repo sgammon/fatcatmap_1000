@@ -109,7 +109,13 @@ lib: .env
 	@ln -s $(PWD)/scripts/fcm $(PWD)/bin/fcm
 	@ln -s $(PWD)/scripts/fatcatmap $(PWD)/bin/fatcatmap
 	@chmod +x $(PWD)/scripts/fcm $(PWD)/scripts/fatcatmap
-	@echo "$(PWD)/fatcatmap/lib" > lib/python2.7/site-packages/fatcatmap.pth
+	@echo "$(PWD)/fatcatmap/lib" > lib/python2.7/site-packages/fatcatmap-lib.pth
+	@echo "$(PWD)/fatcatmap" > lib/python2.7/site-packages/fatcatmap.pth
+	@echo "$(PWD)/.." > lib/python2.7/site-packages/fcm.pth
+
+	@echo "Overriding standard Google paths..."
+	@echo "" > lib/python2.7/site-packages/protobuf-2.5.0-py2.7-nspkg.pth
+	@rm -fr lib/python2.7/site-packages/webapp2_extras
 
 	@touch .env
 	@echo "Virtualenv is ready."
@@ -131,5 +137,8 @@ config.rb:
 	@ln -s $(PWD)/.Gems/bin/sass $(PWD)/bin/sass
 	@ln -s $(PWD)/.Gems/bin/scss $(PWD)/bin/scss
 	@ln -s $(PWD)/.Gems/bin/sass-convert $(PWD)/bin/sass-convert
+
+	@echo "Cleaning junk..."
+	@rm -fr ./stylesheets ./sass
 
 	@echo "Compass is ready."

@@ -20,6 +20,7 @@
 ## Globals
 _config = {}
 
+
 _std_config = {
     'min': False,
     'version_mode': 'getvar'

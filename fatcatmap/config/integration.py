@@ -69,7 +69,7 @@ _config['webapp2_extras.sessions'] = {
 _config['google.apis'] = {
     
     'client_id': '399170674212-jkqs588siuji4ffkg7rdikje24hfb6fb.apps.googleusercontent.com',
-    'client_secret': private.oauth2_client_secret,
+    #'client_secret': private.oauth2_client_secret,
     'user_agent': 'Catnip/1.0',
 
     'scopes': [  # base scopes to request access to

@@ -15,3 +15,10 @@
               the included license and explicitly means acceptance to these terms.
 
 '''
+
+
+class Catnip(object):
+
+    '''  '''
+
+    pass
